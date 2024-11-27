@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Auth
+{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static', filename = 'home/style.css') }}">{% endblock %}
+
+
+{% block content %}
+
+<form method="post">
+    <div>
+        <h1>Авторизація</h1>
+        <h3>Username</h3>
+        <div class="center">
+            <input type="text" class="field" name="username">
+        </div>
+        <h3>Password</h3>
+        <div class="center">
+            <input type="password" class="field" name="password">
+        </div>
+        <div class="center">
+            <button id="login-confirm-button" type="submit">SEND</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

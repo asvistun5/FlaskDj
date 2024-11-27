@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'home/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'feedback/style.css') }}">
+{% endblock %}
+
+{% block content %} 
+    <form method="POST">
+       <div>
+        <h1>Відправити відгук</h1>
+
+        <div>
+            <input type="text" id="name" name="name" placeholder="Ім'я клієнта:" required>
+        
+            <input type="email" id="email" name="email" placeholder="Email клієнта:" required>
+            
+            <textarea id="feedback" name="feedback" placeholder="Відгук клієнта:" required></textarea>
+        </div>
+        
+        <button type="submit">Відправити відгук</button>
+       </div>
+    </form>
+{% endblock %}
